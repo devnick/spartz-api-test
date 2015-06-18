@@ -1,4 +1,4 @@
-# Spartz REST API coding excersize
+# Spartz REST API coding exercize
 
 ## System requirements
 
@@ -57,7 +57,7 @@ Mark a city as visited by the user
 
 ### Application design rationale
 
-1. From the readme, the suggested endpoints are prefixed with /v1/ for versioning. This is a bad practice and versioning should be controlled from content negotiation using the Application header on incoming requests. The URI is the bedrock of the API and should not change to avoid breaking changes in client applications. Conforming to HATEOAS principles and allowing for header version requests is a cleaner, more scalable method for versioning, and thus I have ommitted it from the endpoints for this exercise as a demonstration of best practises.
+1. From the readme, the suggested endpoints are prefixed with /v1/ for versioning. This is a bad practice and versioning should be controlled from content negotiation using the Application header on incoming requests. The URI is the bedrock of the API and should not change to avoid breaking changes in client applications. Conforming to HATEOAS principles and allowing for header version requests is a cleaner, more scalable method for versioning, and thus I have ommitted it from the endpoints for this exercize as a demonstration of best practises.
 
 2. For accessing nearby cities based on a defines radius, having a listing of related cities at the endpoint /states/{stateId}/cities/{cityId}?radius=100 (as in the readme's suggestion) does not conform strictly to RESTful concepts. The primary endpoint request here is for a single resource (a city), so I have elected to instead make the request more flexible by allowing for inclusion of an 'include' parameter that can specify to include nearby locations selectively, the ability to specify a radius up to 100 miles, and the ability to limit the nested paged results (they can be a large subset of data) with the limit(limit|offset) parameter.
 
