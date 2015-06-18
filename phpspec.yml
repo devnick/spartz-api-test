@@ -1,0 +1,5 @@
+suites:
+    main:
+        namespace: Spartz
+        psr4_prefix: Spartz
+        src_path: app
