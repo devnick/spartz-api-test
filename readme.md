@@ -17,43 +17,43 @@
 
 Get a paginated list of states
 
-    `GET /states?page=x`
+    GET /states?page=x
 
 Get a state by ID
 
-    `GET /states/{stateId}`
+    GET /states/{stateId}
 
 Get a city by state and allow for inclusion of nearby locations, controlled by the radius parameter, and page through the nearby collection using the limit parameter (limit|offset)
 
-    `GET /states/{stateId}/cities/{cityId}?include=nearby:radius(100):limit(10|0)`
+    GET /states/{stateId}/cities/{cityId}?include=nearby:radius(100):limit(10|0)
 
 ### Cities
 
 Get a paginated list of cities
 
-    `GET /cities?page=x`
+    GET /cities?page=x
 
 Get a city by ID
 
-    `GET /cities/{cityId}?include=nearby:radius(100):limit(10|0)`
+    GET /cities/{cityId}?include=nearby:radius(100):limit(10|0)
 
 ### Users
 
 Get a paginated list of users
 
-    `GET /users?page=x`
+    GET /users?page=x
 
 Get a user by ID
 
-    `GET /users/{userId}`
+    GET /users/{userId}
 
 Get a list of visited cities by user
 
-    `GET /users/{userId}/visits?page=x`
+    GET /users/{userId}/visits?page=x
 
 Mark a city as visited by the user
 
-    `POST /users/{userId}/visits?city=xxxxx&state=xxxxx`
+    POST /users/{userId}/visits?city=xxxxx&state=xxxxx
 
 ### Application design rationale
 
