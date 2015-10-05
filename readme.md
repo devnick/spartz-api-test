@@ -1,4 +1,4 @@
-# Spartz REST API coding exercize
+# Spartz REST API coding exercise
 
 ## System requirements
 
